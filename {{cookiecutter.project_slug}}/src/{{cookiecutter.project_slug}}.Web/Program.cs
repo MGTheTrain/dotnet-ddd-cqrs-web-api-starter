@@ -64,8 +64,8 @@ builder.Services.AddControllers();
 //     );
 // }
 // ...
-// builder.Services.AddTransient<IDomainAService, DomainAService>(); // utilizes Db Contexts
-// builder.Services.Singleton<IDomainBService, DomainBService>();
+// builder.Services.AddTransient<IDomainACommands, DomainACommands>(); // utilizes Db Contexts
+// builder.Services.Singleton<IDomainBQueries, DomainBQueries>();
 // ```
 
 var app = builder.Build();
