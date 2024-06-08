@@ -56,5 +56,5 @@ public class DomainModelB : IValidatableObject
         yield return ValidationResult.Success;
     }
 
-    // NOTE: Add other domain models for domain A
+    // NOTE: Add other domain models for domain B
 }

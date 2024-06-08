@@ -10,7 +10,7 @@ public interface IDomainACommands
     /// </summary>
     /// <param name="DomainA">The domain model A to create.</param>
     /// <returns>The created domain model A.</returns>
-    Task<DomainA?> CreateAsync(DomainA? DomainA);
+    Task<DomainModelA?> CreateAsync(DomainModelA? domainModelA);
 
     /// <summary>
     /// Updates existing DomainA by its unique identifier asynchronously.
@@ -18,12 +18,12 @@ public interface IDomainACommands
     /// <param name="id">The unique identifier of the domain model A to update.</param>
     /// <param name="DomainA">The new domain model A.</param>
     /// <returns>The updated domain model A.</returns>
-    Task<DomainA?> UpdateByIdAsync(Guid id, DomainA? DomainA);
+    Task<DomainModelA?> UpdateByIdAsync(Guid id, DomainModelA? domainModelA);
 
     /// <summary>
     /// Deletes DomainA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to delete.</param>
     /// <returns>The deleted domain model A.</returns>
-    Task<DomainA?> DeleteByIdAsync(Guid id);
+    Task<DomainModelA?> DeleteByIdAsync(Guid id);
 }

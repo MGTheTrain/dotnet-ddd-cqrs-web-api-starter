@@ -10,12 +10,12 @@ public interface IDomainAQueries
     /// </summary>
     /// <param name="filter">The criteria for filtering DomainA (optional).</param>
     /// <returns>A collection of DomainA matching the specified criteria.</returns>
-    Task<IEnumerable<DomainA>?> GetAsync(DomainAFilter? filter);
+    Task<IEnumerable<DomainModelA>?> GetAsync(DomainAFilter? filter);
 
     /// <summary>
     /// Gets DomainA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A.</param>
     /// <returns>The domain model A with the specified identifier.</returns>
-    Task<DomainA?> GetByIdAsync(Guid id);
+    Task<DomainModelA?> GetByIdAsync(Guid id);
 }

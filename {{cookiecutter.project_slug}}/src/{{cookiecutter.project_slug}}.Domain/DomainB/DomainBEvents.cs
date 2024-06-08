@@ -49,5 +49,5 @@ public class EventB : IValidatableObject
         yield return ValidationResult.Success;
     }
 
-    // NOTE: Add other events for domain A
+    // NOTE: Add other events for domain B
 }

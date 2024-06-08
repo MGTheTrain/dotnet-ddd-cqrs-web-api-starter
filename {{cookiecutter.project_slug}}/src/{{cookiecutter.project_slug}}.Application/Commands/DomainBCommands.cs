@@ -1,7 +1,7 @@
 ﻿// If necessary incorporate dependencies from the infrastructure most likely and persistence layers and adjust 
 // {{cookiecutter.project_slug}}.Application.csproj accordingly, e.g. in case if the persistence layer and ORMs are not required.
 
-using {{cookiecutter.project_slug}}.Domain.DomainA;
+using {{cookiecutter.project_slug}}.Domain.DomainB;
 
 namespace {{cookiecutter.project_slug}}.Application.Commands;
 
@@ -37,31 +37,31 @@ public class DomainBCommands : IDomainBCommands
     /// <summary>
     /// Creates a new domain model A asynchronously.
     /// </summary>
-    /// <param name="domainA">The domain model A to create.</param>
+    /// <param name="domainModelB">The domain model A to create.</param>
     /// <returns>The created domain model A, or null if creation fails.</returns>
-    public async Task<DomainA?> CreateAsync(DomainA? domainA)
+    public async Task<DomainModelB?> CreateAsync(DomainModelB? domainModelB)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelB?>(null);
     }
 
     /// <summary>
-    /// Updates an existing DomainA by its unique identifier asynchronously.
+    /// Updates an existing DomainModelB by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to update.</param>
-    /// <param name="domainA">The new domain model A.</param>
+    /// <param name="domainModelB">The new domain model A.</param>
     /// <returns>The updated domain model A, or null if update fails.</returns>
-    public async Task<DomainA?> UpdateByIdAsync(Guid id, DomainA? domainA)
+    public async Task<DomainModelB?> UpdateByIdAsync(Guid id, DomainModelB? domainModelB)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelB?>(null);
     }
 
     /// <summary>
-    /// Deletes DomainA by its unique identifier asynchronously.
+    /// Deletes DomainModelB by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to delete.</param>
     /// <returns>The deleted domain model A, or null if deletion fails.</returns>
-    public async Task<DomainA?> DeleteByIdAsync(Guid id)
+    public async Task<DomainModelB?> DeleteByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelB?>(null);
     }
 }

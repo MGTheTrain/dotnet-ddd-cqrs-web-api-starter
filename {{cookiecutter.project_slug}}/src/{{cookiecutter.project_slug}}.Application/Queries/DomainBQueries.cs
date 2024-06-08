@@ -39,9 +39,9 @@ public class DomainBQueries : IDomainBQueries
     /// </summary>
     /// <param name="filter">The criteria for filtering DomainB (optional).</param>
     /// <returns>A collection of DomainB matching the specified criteria, or null if no matches are found.</returns>
-    public async Task<IEnumerable<DomainB>?> GetAsync(DomainBFilter? filter)
+    public async Task<IEnumerable<DomainModelB>?> GetAsync(DomainBFilter? filter)
     {
-        return await Task.FromResult<IEnumerable<DomainB>?>(null);
+        return await Task.FromResult<IEnumerable<DomainModelB>?>(null);
     }
 
     /// <summary>
@@ -49,8 +49,8 @@ public class DomainBQueries : IDomainBQueries
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A.</param>
     /// <returns>The domain model A with the specified identifier, or null if not found.</returns>
-    public async Task<DomainB?> GetByIdAsync(Guid id)
+    public async Task<DomainModelB?> GetByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainB?>(null);
+        return await Task.FromResult<DomainModelB?>(null);
     }
 }

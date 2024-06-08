@@ -35,22 +35,22 @@ public class DomainAQueries : IDomainAQueries
     // ```
 
     /// <summary>
-    /// Gets DomainA based on specified criteria asynchronously.
+    /// Gets DomainModelA based on specified criteria asynchronously.
     /// </summary>
-    /// <param name="filter">The criteria for filtering DomainA (optional).</param>
-    /// <returns>A collection of DomainA matching the specified criteria, or null if no matches are found.</returns>
-    public async Task<IEnumerable<DomainA>?> GetAsync(DomainAFilter? filter)
+    /// <param name="filter">The criteria for filtering DomainModelA (optional).</param>
+    /// <returns>A collection of DomainModelA matching the specified criteria, or null if no matches are found.</returns>
+    public async Task<IEnumerable<DomainModelA>?> GetAsync(DomainAFilter? filter)
     {
-        return await Task.FromResult<IEnumerable<DomainA>?>(null);
+        return await Task.FromResult<IEnumerable<DomainModelA>?>(null);
     }
 
     /// <summary>
-    /// Gets DomainA by its unique identifier asynchronously.
+    /// Gets DomainModelA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A.</param>
     /// <returns>The domain model A with the specified identifier, or null if not found.</returns>
-    public async Task<DomainA?> GetByIdAsync(Guid id)
+    public async Task<DomainModelA?> GetByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 }

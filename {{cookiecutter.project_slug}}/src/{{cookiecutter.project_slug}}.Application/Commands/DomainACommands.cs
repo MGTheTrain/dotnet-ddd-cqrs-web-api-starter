@@ -9,21 +9,21 @@ public class DomainACommands : IDomainACommands
 {
     // Instantiate loggers and any required objects from the infrastructure and/or persistence layers, e.g.
     // ```cs
-    // private readonly ILogger<DomainACommands> _logger;
+    // private readonly ILogger<DomainModelACommands> _logger;
     // private readonly SqlDbContext? _sqlDbContext;
     // private readonly GcpBlobConnector? _gcpBlobConnetor;
     // ```
 
     // Set up the constructor, e.g.
     // ```cs
-    // public DomainACommands(SqlDbContext sqlDbContext)
+    // public DomainModelACommands(SqlDbContext sqlDbContext)
     // {
     //     var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
-    //     this._logger = loggerFactory.CreateLogger<DomainACommands>();
+    //     this._logger = loggerFactory.CreateLogger<DomainModelACommands>();
     //     try
     //     {
     //         this._sqlDbContext = sqlDbContext;
-    //         this._logger.LogInformation($"Initialization succeeded for {nameof(DomainACommands)}");
+    //         this._logger.LogInformation($"Initialization succeeded for {nameof(DomainModelACommands)}");
     //         // ...
     //     }
     //     catch (Exception ex)
@@ -37,31 +37,31 @@ public class DomainACommands : IDomainACommands
     /// <summary>
     /// Creates a new domain model A asynchronously.
     /// </summary>
-    /// <param name="domainA">The domain model A to create.</param>
+    /// <param name="domainModelA">The domain model A to create.</param>
     /// <returns>The created domain model A, or null if creation fails.</returns>
-    public async Task<DomainA?> CreateAsync(DomainA? domainA)
+    public async Task<DomainModelA?> CreateAsync(DomainModelA? domainModelA)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 
     /// <summary>
-    /// Updates an existing DomainA by its unique identifier asynchronously.
+    /// Updates an existing DomainModelA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to update.</param>
-    /// <param name="domainA">The new domain model A.</param>
+    /// <param name="domainModelA">The new domain model A.</param>
     /// <returns>The updated domain model A, or null if update fails.</returns>
-    public async Task<DomainA?> UpdateByIdAsync(Guid id, DomainA? domainA)
+    public async Task<DomainModelA?> UpdateByIdAsync(Guid id, DomainModelA? domainModelA)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 
     /// <summary>
-    /// Deletes DomainA by its unique identifier asynchronously.
+    /// Deletes DomainModelA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to delete.</param>
     /// <returns>The deleted domain model A, or null if deletion fails.</returns>
-    public async Task<DomainA?> DeleteByIdAsync(Guid id)
+    public async Task<DomainModelA?> DeleteByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 }

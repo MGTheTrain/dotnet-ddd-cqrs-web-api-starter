@@ -21,10 +21,10 @@ public class DomainModelA : IValidatableObject
     /// <summary>
     /// Sets the properties
     /// </summary>
-    /// <param name="DomainModelA">The updated domain model A.</param>
-    public void SetProperties(DomainModelA DomainModelA)
+    /// <param name="domainModelA">The updated domain model A.</param>
+    public void SetProperties(DomainModelA domainModelA)
     {
-        DateTimeUpdated = DomainModelA.DateTimeUpdated;
+        DateTimeUpdated = domainModelA.DateTimeUpdated;
         // More attributes
     }
 
