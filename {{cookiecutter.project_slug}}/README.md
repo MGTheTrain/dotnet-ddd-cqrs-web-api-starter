@@ -57,6 +57,14 @@ make test
 make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
+### Starting the Kestrel-Webserver
+
+Execute:
+
+```sh
+make run
+```
+
 ### Generating project documentation
 
 Run:
