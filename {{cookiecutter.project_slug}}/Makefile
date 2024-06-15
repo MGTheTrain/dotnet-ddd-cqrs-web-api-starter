@@ -7,18 +7,15 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: all build test test-individual run clean docs format-and-lint
+.PHONY: start-docker-cmp stop-docker-cmp test test-individual run clean docs format-and-lint
 
-# Default target
-all: build test
+start-docker-cmp:
+	cd devops/docker-compose
+	docker-compose up -d --build
 
-# Compile the C# source code
-build:
-	@folders=$(find ./src -type f -name '*.csproj' -exec dirname {} \;); \
-	for folder in ${folders}; do \
-		echo "Running tests in folder: ${folder}"; \
-		dotnet build "${folder}"; \
-	done
+stop-docker-cmp:
+	cd devops/docker-compose
+	docker-compose down -v
 
 # Run tests
 test:
@@ -53,4 +50,3 @@ docs:
 # Format and lint C# files
 format-and-lint:
 	cd devops/scripts && ./format_and_lint.sh
-

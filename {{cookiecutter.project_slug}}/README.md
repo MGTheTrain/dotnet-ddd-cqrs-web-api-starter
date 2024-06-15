@@ -38,17 +38,15 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.PersistenceTest/{{cookiecutter.project_slug}}.PersistenceTest.csproj
 ```
 
-### Compiling C# source code 
-
-Run in order to compile C# source files in the `src` folder:
-
-```sh
-make build
-```
-
 ### Running xUnit tests
 
-Run in order to compile and run xUnit tests:
+If external services for storage or messaging are needed via Docker Compose utilize the following line:
+
+```sh
+make start-docker-cmp
+```
+
+Run xUnit tests:
 
 ```sh
 # All tests
@@ -59,7 +57,13 @@ make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutte
 
 ### Starting the Kestrel-Webserver
 
-Execute:
+If external services for storage or messaging are needed via Docker Compose utilize the following line:
+
+```sh
+make start-docker-cmp
+```
+
+Start Kestrel-Webserver:
 
 ```sh
 make run
@@ -72,6 +76,7 @@ Run:
 ```sh
 make docs
 ```
+
 ### Auto-format and lint C# files
 
 Run:
@@ -84,10 +89,16 @@ make format-and-lint
 
 ### Clearing artifacts
 
-Run:
+To remove dotnet related build artifacts run:
 
 ```sh
 make clean
+```
+
+If docker-compose has been utilized for local development clear docker resources with:
+
+```sh
+make stop-docker-cmp
 ```
 
 ## Author
