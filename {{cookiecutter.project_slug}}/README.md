@@ -49,13 +49,13 @@ make start-docker-cmp
 Run unit tests:
 
 ```sh
-make run-unit-test
+make run-unit-tests
 ```
 
 Run integration tests:
 
 ```sh
-make run-integration-test
+make run-integration-tests
 ```
 
 Run individual xUnit tests:
