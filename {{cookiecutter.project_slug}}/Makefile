@@ -7,7 +7,7 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-individual-test run clean docs format-and-lint help
+.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-selected-tests run clean docs format-and-lint help
 
 help:
 	@echo "Available make commands:"
