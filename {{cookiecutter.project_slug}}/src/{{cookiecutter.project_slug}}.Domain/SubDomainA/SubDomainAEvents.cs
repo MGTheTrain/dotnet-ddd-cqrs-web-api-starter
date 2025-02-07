@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace {{cookiecutter.project_slug}}.Domain.DomainA;
+namespace {{cookiecutter.project_slug}}.Domain.SubDomainA;
 
 /// <summary>
-/// Represents domain model A information
+/// Represents SubdomainEntityA information
 /// </summary>
 public class EventA : IValidatableObject
 {
@@ -20,7 +20,7 @@ public class EventA : IValidatableObject
     /// <summary>
     /// Sets the properties
     /// </summary>
-    /// <param name="EventA">The updated domain model A.</param>
+    /// <param name="EventA">The updated SubdomainEntityA.</param>
     public void SetProperties(EventA EventA)
     {
         // More attributes
