@@ -7,32 +7,7 @@ namespace {{cookiecutter.project_slug}}.Application.Queries;
 
 public class SubDomainAQueries : ISubDomainAQueries
 {
-    // Instantiate loggers and any required objects from the infrastructure and/or persistence layers, e.g.
-    // ```cs
-    // private readonly ILogger<SubDomainAQueries> _logger;
-    // private readonly SqlDbContext? _sqlDbContext;
-    // private readonly GcpBlobConnector? _gcpBlobConnetor;
-    // ```
-
-    // Set up the constructor, e.g.
-    // ```cs
-    // public SubDomainAQueries(SqlDbContext sqlDbContext)
-    // {
-    //     var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
-    //     this._logger = loggerFactory.CreateLogger<SubDomainAQueries>();
-    //     try
-    //     {
-    //         this._sqlDbContext = sqlDbContext;
-    //         this._logger.LogInformation($"Initialization succeeded for {nameof(SubDomainAQueries)}");
-    //         // ...
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         this._logger.LogError(ex.Message);
-    //         this._sqlDbContext = null;
-    //     }
-    // }
-    // ```
+    // Consider logger and any required interfaces from the infrastructure and/or persistence layers
 
     /// <summary>
     /// Gets SubDomainEntityA based on specified criteria asynchronously.
