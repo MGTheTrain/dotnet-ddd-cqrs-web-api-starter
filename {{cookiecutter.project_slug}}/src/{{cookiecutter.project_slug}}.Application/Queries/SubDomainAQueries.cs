@@ -10,22 +10,22 @@ public class SubDomainAQueries : ISubDomainAQueries
     // Consider logger and any required interfaces from the infrastructure and/or persistence layers
 
     /// <summary>
-    /// Gets SubDomainEntityA based on specified criteria asynchronously.
+    /// Gets SubDomainAEntity based on specified criteria asynchronously.
     /// </summary>
     /// <param name="filter">The criteria for filtering (optional).</param>
-    /// <returns>A collection of SubDomainEntityA matching the specified criteria, or null if no matches are found.</returns>
-    public async Task<IEnumerable<SubDomainEntityA>?> GetAsync(SubDomainAFilter? filter)
+    /// <returns>A collection of SubDomainAEntity matching the specified criteria, or null if no matches are found.</returns>
+    public async Task<IEnumerable<SubDomainAEntity>?> GetAsync(SubDomainAFilter? filter)
     {
-        return await Task.FromResult<IEnumerable<SubDomainEntityA>?>(null);
+        return await Task.FromResult<IEnumerable<SubDomainAEntity>?>(null);
     }
 
     /// <summary>
-    /// Gets SubDomainEntityA by its unique identifier asynchronously.
+    /// Gets SubDomainAEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityA.</param>
-    /// <returns>The SubdomainEntityA with the specified identifier, or null if not found.</returns>
-    public async Task<SubDomainEntityA?> GetByIdAsync(Guid id)
+    /// <param name="id">The unique identifier of the SubDomainAEntity.</param>
+    /// <returns>The SubDomainAEntity with the specified identifier, or null if not found.</returns>
+    public async Task<SubDomainAEntity?> GetByIdAsync(Guid id)
     {
-        return await Task.FromResult<SubDomainEntityA?>(null);
+        return await Task.FromResult<SubDomainAEntity?>(null);
     }
 }

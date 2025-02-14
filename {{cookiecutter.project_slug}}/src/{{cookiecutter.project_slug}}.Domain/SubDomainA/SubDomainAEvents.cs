@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations;
 namespace {{cookiecutter.project_slug}}.Domain.SubDomainA;
 
 /// <summary>
-/// Represents SubdomainEntityA information
+/// Represents SubDomainAEntity
 /// </summary>
-public class EventA : IValidatableObject
+public class SubDomainAEvent : IValidatableObject
 {
     /// <summary>
     /// Default constructor
     /// </summary>
-    public EventA()
+    public SubDomainAEvent()
     {
         Id = Guid.NewGuid();
         TimeStamp = DateTime.UtcNow;
@@ -20,8 +20,8 @@ public class EventA : IValidatableObject
     /// <summary>
     /// Sets the properties
     /// </summary>
-    /// <param name="EventA">The updated SubdomainEntityA.</param>
-    public void SetProperties(EventA EventA)
+    /// <param name="SubDomainAEvent">The updated SubDomainAEntity.</param>
+    public void SetProperties(SubDomainAEvent SubDomainAEvent)
     {
         // More attributes
     }
@@ -38,16 +38,16 @@ public class EventA : IValidatableObject
     {
         if (Id == Guid.Empty)
         {
-            yield return new ValidationResult($"{nameof(EventA)}.{nameof(Id)} can't be empty");
+            yield return new ValidationResult($"{nameof(SubDomainAEvent)}.{nameof(Id)} can't be empty");
         }
 
         if (TimeStamp == default(DateTime))
         {
-            yield return new ValidationResult($"{nameof(EventA)}.{nameof(TimeStamp)} can't be empty");
+            yield return new ValidationResult($"{nameof(SubDomainAEvent)}.{nameof(TimeStamp)} can't be empty");
         }
         
         yield return ValidationResult.Success;
     }
 
-    // NOTE: Add other events for domain A
+    // NOTE: Add other events
 }

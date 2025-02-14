@@ -1,29 +1,29 @@
 namespace {{cookiecutter.project_slug}}.Domain.SubDomainB;
 
 /// <summary>
-/// Represents a command interface facilitating operations beyond reading, such as writing, modifying, deleting, and sending events.
+/// Represents a command interface facilitating operations such as writing, modifying, deleting and sending events
 /// </summary>
 public interface ISubDomainBCommands
 {
     /// <summary>
-    /// Creates new SubdomainEntityA asynchronously.
+    /// Creates new SubDomainAEntity asynchronously.
     /// </summary>
-    /// <param name="subDomainEntityB">The SubdomainEntityA to create.</param>
-    /// <returns>The created SubdomainEntityA.</returns>
-    Task<SubDomainEntityB?> CreateAsync(SubDomainEntityB? subDomainEntityB);
+    /// <param name="subDomainBEntity">The SubDomainAEntity to create.</param>
+    /// <returns>The created SubDomainAEntity.</returns>
+    Task<SubDomainBEntity?> CreateAsync(SubDomainBEntity? subDomainBEntity);
 
     /// <summary>
-    /// Updates existing SubDomainEntityB by its unique identifier asynchronously.
+    /// Updates existing SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityA to update.</param>
-    /// <param name="subDomainEntityB">The new SubdomainEntityA.</param>
-    /// <returns>The updated SubdomainEntityA.</returns>
-    Task<SubDomainEntityB?> UpdateByIdAsync(Guid id, SubDomainEntityB? subDomainEntityB);
+    /// <param name="id">The unique identifier of the SubDomainAEntity to update.</param>
+    /// <param name="subDomainBEntity">The new SubDomainAEntity.</param>
+    /// <returns>The updated SubDomainAEntity.</returns>
+    Task<SubDomainBEntity?> UpdateByIdAsync(Guid id, SubDomainBEntity? subDomainBEntity);
 
     /// <summary>
-    /// Deletes SubDomainEntityB by its unique identifier asynchronously.
+    /// Deletes SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityA to delete.</param>
-    /// <returns>The deleted SubdomainEntityA.</returns>
-    Task<SubDomainEntityB?> DeleteByIdAsync(Guid id);
+    /// <param name="id">The unique identifier of the SubDomainAEntity to delete.</param>
+    /// <returns>The deleted SubDomainAEntity.</returns>
+    Task<SubDomainBEntity?> DeleteByIdAsync(Guid id);
 }

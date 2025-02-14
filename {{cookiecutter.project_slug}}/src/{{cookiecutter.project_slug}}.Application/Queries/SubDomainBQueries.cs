@@ -5,27 +5,27 @@ using {{cookiecutter.project_slug}}.Domain.SubDomainB;
 
 namespace {{cookiecutter.project_slug}}.Application.Queries;
 
-public class SubDomainEntityBQueries : ISubDomainBQueries
+public class SubDomainBEntityQueries : ISubDomainBQueries
 {
     // Consider logger and any required interfaces from the infrastructure and/or persistence layers
 
     /// <summary>
-    /// Gets SubDomainEntityB based on specified criteria asynchronously.
+    /// Gets SubDomainBEntity based on specified criteria asynchronously.
     /// </summary>
     /// <param name="filter">The criteria for filtering (optional).</param>
-    /// <returns>A collection of SubDomainEntityB matching the specified criteria, or null if no matches are found.</returns>
-    public async Task<IEnumerable<SubDomainEntityB>?> GetAsync(SubDomainBFilter? filter)
+    /// <returns>A collection of SubDomainBEntity matching the specified criteria, or null if no matches are found.</returns>
+    public async Task<IEnumerable<SubDomainBEntity>?> GetAsync(SubDomainBFilter? filter)
     {
-        return await Task.FromResult<IEnumerable<SubDomainEntityB>?>(null);
+        return await Task.FromResult<IEnumerable<SubDomainBEntity>?>(null);
     }
 
     /// <summary>
-    /// Gets SubDomainEntityB by its unique identifier asynchronously.
+    /// Gets SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityA.</param>
-    /// <returns>The SubdomainEntityA with the specified identifier, or null if not found.</returns>
-    public async Task<SubDomainEntityB?> GetByIdAsync(Guid id)
+    /// <param name="id">The unique identifier of the SubDomainAEntity.</param>
+    /// <returns>The SubDomainAEntity with the specified identifier, or null if not found.</returns>
+    public async Task<SubDomainBEntity?> GetByIdAsync(Guid id)
     {
-        return await Task.FromResult<SubDomainEntityB?>(null);
+        return await Task.FromResult<SubDomainBEntity?>(null);
     }
 }

@@ -10,33 +10,33 @@ public class SubDomainACommands : ISubDomainACommands
     // Consider logger and any required interfaces from the infrastructure and/or persistence layers
 
     /// <summary>
-    /// Creates a new SubDomainEntityA asynchronously.
+    /// Creates a new SubDomainAEntity asynchronously.
     /// </summary>
-    /// <param name="subDomainEntityA">The SubDomainEntityA to create.</param>
-    /// <returns>The created SubDomainEntityA, or null if creation fails.</returns>
-    public async Task<SubDomainEntityA?> CreateAsync(SubDomainEntityA? subDomainEntityA)
+    /// <param name="subDomainAEntity">The SubDomainAEntity to create.</param>
+    /// <returns>The created SubDomainAEntity, or null if creation fails.</returns>
+    public async Task<SubDomainAEntity?> CreateAsync(SubDomainAEntity? subDomainAEntity)
     {
-        return await Task.FromResult<SubDomainEntityA?>(null);
+        return await Task.FromResult<SubDomainAEntity?>(null);
     }
 
     /// <summary>
-    /// Updates an existing SubDomainEntityA by its unique identifier asynchronously.
+    /// Updates an existing SubDomainAEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubDomainEntityA to update.</param>
-    /// <param name="subDomainEntityA">The new SubDomainEntityA.</param>
-    /// <returns>The updated SubDomainEntityA, or null if update fails.</returns>
-    public async Task<SubDomainEntityA?> UpdateByIdAsync(Guid id, SubDomainEntityA? subDomainEntityA)
+    /// <param name="id">The unique identifier of the SubDomainAEntity to update.</param>
+    /// <param name="subDomainAEntity">The new SubDomainAEntity.</param>
+    /// <returns>The updated SubDomainAEntity, or null if update fails.</returns>
+    public async Task<SubDomainAEntity?> UpdateByIdAsync(Guid id, SubDomainAEntity? subDomainAEntity)
     {
-        return await Task.FromResult<SubDomainEntityA?>(null);
+        return await Task.FromResult<SubDomainAEntity?>(null);
     }
 
     /// <summary>
-    /// Deletes SubDomainEntityA by its unique identifier asynchronously.
+    /// Deletes SubDomainAEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubDomainEntityA to delete.</param>
-    /// <returns>The deleted SubDomainEntityA, or null if deletion fails.</returns>
-    public async Task<SubDomainEntityA?> DeleteByIdAsync(Guid id)
+    /// <param name="id">The unique identifier of the SubDomainAEntity to delete.</param>
+    /// <returns>The deleted SubDomainAEntity, or null if deletion fails.</returns>
+    public async Task<SubDomainAEntity?> DeleteByIdAsync(Guid id)
     {
-        return await Task.FromResult<SubDomainEntityA?>(null);
+        return await Task.FromResult<SubDomainAEntity?>(null);
     }
 }
