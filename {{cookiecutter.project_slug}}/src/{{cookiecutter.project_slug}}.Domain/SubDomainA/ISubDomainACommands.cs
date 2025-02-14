@@ -13,7 +13,7 @@ public interface ISubDomainACommands
     Task<SubDomainAEntity?> CreateAsync(SubDomainAEntity? subDomainAEntity);
 
     /// <summary>
-    /// Updates existing SubDomainA by its unique identifier asynchronously.
+    /// Updates existing SubDomainAEntity by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the SubDomainAEntity to update.</param>
     /// <param name="subDomainAEntity">The new SubDomainAEntity.</param>
@@ -21,7 +21,7 @@ public interface ISubDomainACommands
     Task<SubDomainAEntity?> UpdateByIdAsync(Guid id, SubDomainAEntity? subDomainAEntity);
 
     /// <summary>
-    /// Deletes SubDomainA by its unique identifier asynchronously.
+    /// Deletes SubDomainAEntity by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the SubDomainAEntity to delete.</param>
     /// <returns>The deleted SubDomainAEntity.</returns>
