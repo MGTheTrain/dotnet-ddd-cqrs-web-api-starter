@@ -7,7 +7,7 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-selected-tests run clean docs format-and-lint help
+.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-selected-tests run clean install-gems docs format-and-lint help
 
 help:
 	@echo "Available make commands:"
@@ -15,9 +15,10 @@ help:
 	@echo "  stop-docker-cmp            - Stop the Docker Compose services"
 	@echo "  run-unit-tests             - Run all unit tests"
 	@echo "  run-integration-tests      - Run all integration tests"
-	@echo "  run-selected-tests         - Run an selected tests (provide subdir=<subdirectory>)"
+	@echo "  run-selected-tests         - Run selected tests (provide subdir=<subdirectory>)"
 	@echo "  run                        - Start the web server"
 	@echo "  clean                      - Clean up generated files"
+	@echo "  install-gems               - Install all required gems (including Bundler) to run Jekyll Server."
 	@echo "  docs                       - Build and serve the documentation"
 	@echo "  format-and-lint            - Format and lint C# files"
 	@echo "  help                       - Display this help message"
@@ -61,9 +62,12 @@ clean:
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
 	find $(SRC_DIR) $(TEST_DIR) -type d \( -name 'obj' -o -name 'bin' \) -exec rm -rf {} +
 
+install-gems:
+	cd $(DOCS_DIR)/{{cookiecutter.project_slug}} && gem install bundler && bundler update && bundle install
+
 # Build and serve documentation
 docs:
-	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
+	cd $(DOCS_DIR)/{{cookiecutter.project_slug}} && bundle exec jekyll serve && echo "Visit in a browser of choice localhost:4000"
 
 # Format and lint C# files
 format-and-lint:
